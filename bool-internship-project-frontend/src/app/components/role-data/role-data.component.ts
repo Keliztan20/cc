@@ -220,7 +220,7 @@ export class RoleDataComponent {
       alert('Role id is required');
       return;
     }
-    this.http.delete(this.APIURL + 'delete-role/' + this.selectedRole?.role_id)
+    this.http.delete(this.APIURL + `delete-role?role_id=${this.selectedRole?.role_id}`)
       .subscribe({
         next: () => {
           this.fetchRoles();
