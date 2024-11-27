@@ -1,0 +1,57 @@
+/* Center the container in the viewport */
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 100px;
+  max-width: 1000px;
+  margin: auto;
+  background: #eeeeee;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Light background color */
+}
+
+.button-container1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+    width: 990px;
+    margin: auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light background color */
+  }
+  
+  /* Style for buttons */
+  .custom-button {
+    background-color: #007BFF; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    padding: 15px 30px; /* Add padding */
+    width: max-content;
+    margin: 10px 0; /* Add margin between buttons */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 18px; /* Larger text */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth transitions */
+  }
+  
+  /* Button hover effect */
+  .custom-button:hover {
+    background-color: #cbcbcb; /* Darker green on hover */
+    color: black;
+    transform: scale(1.05); /* Slightly enlarge button */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+  }
+  
+  /* Button active effect */
+  .custom-button:active {
+    transform: scale(0.95); /* Slightly shrink button on click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduce shadow on click */
+  }
+  
