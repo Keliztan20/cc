@@ -44,3 +44,4 @@ Thumbs.db
 .vscode/
 __pycache__/
 .gitattributes
+venv/
