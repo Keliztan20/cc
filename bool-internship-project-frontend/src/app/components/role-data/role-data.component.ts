@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, NgModel, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-role-data',
   standalone: true,
-  imports: [CommonModule, HttpClientModule, ReactiveFormsModule],
+  imports: [CommonModule, HttpClientModule, ReactiveFormsModule, FormsModule],
   templateUrl: './role-data.component.html',
   styleUrl: './role-data.component.css'
 })
@@ -23,6 +23,7 @@ export class RoleDataComponent {
   totalPages: number = 0;
   currentPageGroup: number[] = []; // The current group of 5 page numbers to display
   pageNumbers: number[] = [];
+roleName: any;
 
   constructor(private http: HttpClient) { }
 
@@ -181,13 +182,17 @@ export class RoleDataComponent {
     this.selectedRole = { ...role };
   }
 
-  updateRole(roleName: string): void {
-    if (!roleName.trim()) {
-      alert('Role name is required');
-      return;
-    }
+  roleKK : string = '';
 
-    let url = `${this.APIURL}update-role/${this.selectedRole.role_id}?role_name=${encodeURIComponent(roleName)}`
+  updateRole(): void {
+    console.log(this.roleKK)
+    alert(this.roleKK)
+    // if (!this.roleName.trim()) {
+    //   alert('Role name is required');
+    //   return;
+    // }
+
+    let url = `${this.APIURL}update-role/${this.selectedRole.role_id}?role_name=${encodeURIComponent(this.roleKK)}`
 
     this.http.put(url, null)
       .subscribe({

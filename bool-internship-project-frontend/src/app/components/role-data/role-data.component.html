@@ -77,11 +77,11 @@
                 <p>Role id</p>
                 <input type="text" placeholder="Check id" [value]="selectedRole?.role_id" [readOnly]="true">
                 <p>Role name</p>
-                <input type="text" #roleNameInputEdit [value]="selectedRole?.role_name" placeholder="role name"
+                <input type="text" [(ngModel)]="roleKK" [ngModelOptions]="{standalone: true}" [value]="selectedRole?.role_name" placeholder="role name"
                     required>
                 <div class="button-container">
                     <span>
-                        <button (click)="updateRole(roleNameInputEdit.value)">Save</button>
+                        <button (click)="updateRole()">Save</button>
                         <button (click)="closeRolePopup()">Cancel</button>
                     </span>
                 </div>
