@@ -25,6 +25,7 @@ h3, h2 {
     margin-bottom: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
+    flex-wrap: wrap;
 }
 
 .search-bar input {
@@ -57,6 +58,7 @@ h3, h2 {
     justify-content: space-between;
     margin-bottom: 20px;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .search-bar-user input {

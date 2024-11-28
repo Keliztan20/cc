@@ -132,7 +132,7 @@ export class RoleDataComponent {
           },
           error: (error) => {
             console.error('Error fetching filtered roles:', error);
-            //alert('No roles found or an error occurred.');
+            alert('No roles found or an error occurred.');
             this.fetchRoles();
           },
           complete: () => {

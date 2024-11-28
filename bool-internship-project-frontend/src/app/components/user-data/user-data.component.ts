@@ -130,10 +130,14 @@ export class UserDataComponent implements OnInit {
     this.http.get<any[]>(url)
       .subscribe({
         next: (filteredUsers) => {
-          this.users = filteredUsers;
-          this.totalUsers = [...filteredUsers]; // Store the complete users list
-          this.updatePagination();
-          console.log('Filtered users:', this.users);
+          if (filteredUsers.length > 0) {
+            this.users = filteredUsers;
+            this.totalUsers = [...filteredUsers]; // Store the full filtered list
+            this.updatePagination();
+            console.log('Filtered users:', this.users);
+          } else {
+            alert('No users found.');
+          }          
         },
         error: (error) => {
           console.error('Error fetching filtered users:', error);
